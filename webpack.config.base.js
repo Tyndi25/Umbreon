@@ -5,10 +5,11 @@
 import path from 'path';
 import webpack from 'webpack';
 import fs from 'fs';
+import { dependencies as externals } from './app/package.json';
 import { dependencies as possibleExternals } from './package.json';
 
 // Find all the dependencies without a `main` property and add them as webpack externals
-function filterDepWithoutEntryPoints(dep) {
+function filterDepWithoutEntryPoints(dep: string): boolean {
   // Return true if we want to add a dependency to externals
   try {
     // If the root of the dependency has an index.js, return true
@@ -29,6 +30,7 @@ function filterDepWithoutEntryPoints(dep) {
 
 export default {
   externals: [
+    ...Object.keys(externals || {}),
     ...Object.keys(possibleExternals || {}).filter(filterDepWithoutEntryPoints)
   ],
 

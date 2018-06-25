@@ -5,11 +5,11 @@ import { routerMiddleware, routerActions } from 'react-router-redux';
 import { createLogger } from 'redux-logger';
 import rootReducer from '../reducers';
 import * as counterActions from '../actions/counter';
-// import { counterStateType } from '../reducers/counter';
+import type { counterStateType } from '../reducers/counter';
 
 const history = createHashHistory();
 
-const configureStore = (initialState) => {
+const configureStore = (initialState?: counterStateType) => {
   // Redux Configuration
   const middleware = [];
   const enhancers = [];

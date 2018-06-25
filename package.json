@@ -1,5 +1,6 @@
 {
-  "name": "umbreon",
+  "name": "Umbreon",
+  "productName": "Umbreon",
   "version": "0.1.0",
   "description": "Playground project using Electron, React, Redux, Babel, SASS, Relay. Based off of electron-react-boilerplate project.",
   "scripts": {
@@ -40,8 +41,8 @@
     ]
   },
   "build": {
-    "productName": "ElectronReact",
-    "appId": "org.develar.ElectronReact",
+    "productName": "erb-Umbreon",
+    "appId": "com.venomxi.erb-Umbreon",
     "files": [
       "dist/",
       "node_modules/",
@@ -85,17 +86,26 @@
     "type": "git",
     "url": "git+https://github.com/Tyndi25/Umbreon.git"
   },
-  "keywords": [
-    "react",
-    "redux",
-    "electron",
-    "relay"
-  ],
-  "author": "Dan Vincent <dvincent25@gmail.com>",
-  "license": "ISC",
+  "author": {
+    "name": "Dan Vincent",
+    "email": "dvincent25@gmail.com",
+    "url": "https://github.com/Tyndi25"
+  },
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/Tyndi25/Umbreon/issues"
   },
+  "keywords": [
+    "electron",
+    "boilerplate",
+    "react",
+    "redux",
+    "flow",
+    "sass",
+    "webpack",
+    "hot",
+    "reload"
+  ],
   "homepage": "https://github.com/Tyndi25/Umbreon#readme",
   "jest": {
     "moduleNameMapper": {
@@ -106,7 +116,8 @@
       "js"
     ],
     "moduleDirectories": [
-      "node_modules"
+      "node_modules",
+      "app/node_modules"
     ],
     "transform": {
       "^.+\\.js$": "babel-jest"
@@ -159,6 +170,9 @@
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "fbjs-scripts": "^0.8.3",
     "file-loader": "^1.1.11",
+    "flow-bin": "^0.72.0",
+    "flow-runtime": "^0.17.0",
+    "flow-typed": "^2.4.0",
     "husky": "^0.14.3",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^23.0.0",
@@ -203,6 +217,7 @@
   },
   "devEngines": {
     "node": ">=7.x",
-    "npm": ">=4.x"
+    "npm": ">=4.x",
+    "yarn": ">=0.21.3"
   }
 }
